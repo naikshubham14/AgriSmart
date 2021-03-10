@@ -1,0 +1,168 @@
+{% extends 'layout.html' %} {% block body %}
+
+<style>
+
+    html body {
+      background-color: rgb(206, 206, 228);
+
+      
+  }
+
+  
+</style>
+<!--Form Section-->
+<br /><br />
+<h2 style="text-align: center; margin: 0px; color: black">
+  <b>Find how healthy is your crop</b>
+</h2>
+<br />
+
+<div
+  style="
+    width: 350px;
+    height: 50rem;
+    margin: 0px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+  "
+>
+  <form method="POST" action="{{ url_for('dam_pred') }}">
+    <div class="form-group">
+      <label for="Estimated_Insects_Count" style="font-size: 17px"><b>Insect Count</b></label>
+      <input
+        type="text"
+        class="form-control"
+        id="Estimated_Insects_Count"
+        name="Estimated_Insects_Count"
+        placeholder="Enter the value"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="Crop_Type" style="font-size: 17px"
+        ><b>Crop Type</b></label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="Crop_Type"
+        name="Crop_Type"
+        placeholder="Enter the value"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="Soil_Type" style="font-size: 17px"><b>Soil Type</b></label>
+      <input
+        type="text"
+        class="form-control"
+        id="Soil_Type"
+        name="Soil_Type"
+        placeholder="Enter the value"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="Pesticide_Use_Category" style="font-size: 17px"><b>Pesticide Category</b></label>
+      <input
+        type="text"
+        class="form-control"
+        id="Pesticide_Use_Category"
+        name="Pesticide_Use_Category"
+        placeholder="Enter the value"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="Number_Doses_Week" style="font-size: 17px"><b>Dosage per Week</b></label>
+      <input
+        type="text"
+        class="form-control"
+        id="Number_Doses_Week"
+        name="Number_Doses_Week"
+        placeholder="Enter the value"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="Number_Weeks_Used" style="font-size: 17px"><b>Number of Weeks Used</b></label>
+      <input
+        type="text"
+        class="form-control"
+        id="Number_Weeks_Used"
+        name="Number_Weeks_Used"
+        placeholder="Enter the value"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="Number_Weeks_Quit" style="font-size: 17px"><b>Number of Weeks Quit</b></label>
+      <input
+        type="text"
+        class="form-control"
+        id="Number_Weeks_Quit"
+        name="Number_Weeks_Quit"
+        placeholder="Enter the value"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="Season" style="font-size: 17px"><b>Season</b></label>
+      <input
+        type="text"
+        class="form-control"
+        id="Season"
+        name="Season"
+        placeholder="Enter the value"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+
+
+    <div class="d-flex justify-content-center">
+      <button
+        type="submit"
+        class="btn btn-info"
+        style="color: black; font-weight: bold; width: 130px; height:50px; border-radius:12px; font-size: 21px;"
+      >
+        Predict
+      </button>
+    </div>
+  </form>
+</div>
+<center> <h4> Data Input Guidelines </h4> </center>
+<div class="row">
+    
+  <div class="col-sm-6"
+  >
+    <ul class="list-group">
+  <li class="list-group-item">Insect Count : Insect infestation count per Sq. meter in crop</li>
+  <li class="list-group-item">Crop Type : 1 for Kharif , 0 for Rabi</li>
+  <li class="list-group-item">Soil Type : 1 for acidic, 0 for Basic</li>
+  <li class="list-group-item">Pesticide Category : 1 for Blue, 2 for Yellow, 3 for Red</li>
+</ul>
+  </div>
+  <div class="col-sm-6">
+    <ul class="list-group">
+  <li class="list-group-item">Dosage per Week : Number of Dosage of Pesticide per Week</li>
+  <li class="list-group-item">No. of Weeks Used : Number of Weeks Pesticide was Used for</li>
+  <li class="list-group-item">No. of Weeks Quit : Number of Weeks Crop is Without Pesticide</li>
+  <li class="list-group-item">Season : 1 for Summer, 2 for Monsoon, 3 for Winter</li>
+</ul>
+  </div>
+</div>
+
+
+<!-- Form section -->
+
+{% endblock %}
