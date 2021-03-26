@@ -14,7 +14,7 @@ import pickle
 crop_recommendation_model_path = 'models/RandomForest.pkl'
 crop_recommendation_model = pickle.load(open(crop_recommendation_model_path, 'rb'))
 
-crop_damge_model = pickle.load(open(r"C:\Users\shubh\OneDrive\Documents\Major Project\app\models\CD_DecisionTree.pkl", 'rb'))
+crop_damge_model = pickle.load(open(r"\models\CD_DecisionTree.pkl", 'rb'))
 
 # =========================================================================================
 
