@@ -123,7 +123,7 @@ def crop_prediction():
 
         else:
 
-            return render_template('try_again.html', title=title)
+            return render_template('try-again.html', title=title)
 
 # render fertilizer recommendation result page
 
