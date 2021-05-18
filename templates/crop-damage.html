@@ -40,45 +40,48 @@
         required
       />
     </div>
+    
     <div class="form-group">
-      <label for="Crop_Type" style="font-size: 17px"
-        ><b>Crop Type</b></label
-      >
-      <input
-        type="text"
-        class="form-control"
+      <label for="Crop_Type" style="font-size: 17px"><b>Crop Type</b></label>
+      <select class="form-control"
         id="Crop_Type"
         name="Crop_Type"
         placeholder="Enter the value"
         style="font-weight: bold"
-        required
-      />
+        required>
+      <option value="1">Kharif</option>
+      <option value="0">Rabi</option>
+      </select>
     </div>
 
     <div class="form-group">
       <label for="Soil_Type" style="font-size: 17px"><b>Soil Type</b></label>
-      <input
-        type="text"
-        class="form-control"
+      <select class="form-control"
         id="Soil_Type"
         name="Soil_Type"
         placeholder="Enter the value"
         style="font-weight: bold"
-        required
-      />
+        required>
+      <option value="1">Acidic</option>
+      <option value="0">Basic</option>
+      </select>
+      
     </div>
     <div class="form-group">
       <label for="Pesticide_Use_Category" style="font-size: 17px"><b>Pesticide Category</b></label>
-      <input
-        type="text"
-        class="form-control"
+      
+      <select class="form-control"
         id="Pesticide_Use_Category"
         name="Pesticide_Use_Category"
         placeholder="Enter the value"
         style="font-weight: bold"
-        required
-      />
+        required>
+      <option value="1">Blue</option>
+      <option value="2">Yellow</option>
+      <option value="3">Red</option>
+      </select>
     </div>
+    
     <div class="form-group">
       <label for="Number_Doses_Week" style="font-size: 17px"><b>Dosage per Week</b></label>
       <input
@@ -117,15 +120,18 @@
     </div>
     <div class="form-group">
       <label for="Season" style="font-size: 17px"><b>Season</b></label>
-      <input
-        type="text"
-        class="form-control"
+      
+      <select class="form-control"
         id="Season"
         name="Season"
         placeholder="Enter the value"
         style="font-weight: bold"
-        required
-      />
+        required>
+      <option value="1">Summer</option>
+      <option value="2">Monsoon</option>
+      <option value="3">Winter</option>
+      </select>
+      
     </div>
 
 
@@ -147,17 +153,15 @@
   >
     <ul class="list-group">
   <li class="list-group-item">Insect Count : Insect infestation count per Sq. meter in crop</li>
-  <li class="list-group-item">Crop Type : 1 for Kharif , 0 for Rabi</li>
-  <li class="list-group-item">Soil Type : 1 for acidic, 0 for Basic</li>
-  <li class="list-group-item">Pesticide Category : 1 for Blue, 2 for Yellow, 3 for Red</li>
+    <li class="list-group-item">Dosage per Week : Number of Dosage of Pesticide per Week</li>
+
 </ul>
   </div>
   <div class="col-sm-6">
     <ul class="list-group">
-  <li class="list-group-item">Dosage per Week : Number of Dosage of Pesticide per Week</li>
+
   <li class="list-group-item">No. of Weeks Used : Number of Weeks Pesticide was Used for</li>
   <li class="list-group-item">No. of Weeks Quit : Number of Weeks Crop is Without Pesticide</li>
-  <li class="list-group-item">Season : 1 for Summer, 2 for Monsoon, 3 for Winter</li>
 </ul>
   </div>
 </div>
